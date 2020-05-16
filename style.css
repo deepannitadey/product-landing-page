@@ -8,6 +8,34 @@ body {
 h2 {
   font-family: "IBM Plex Mono", monospace;
 }
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding-bottom: 0px;
+  overflow: hidden;
+  background-color: #363636;
+  padding-left: 400px;
+  padding-right: 400px;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 16px;
+  padding-left: 14px;
+  text-decoration: none;
+  font-size: 11pt;
+  font-family: "Noto Sans", sans-serif;
+}
+li a:hover {
+  background-color: #f68e36;
+  font-weight: bolder;
+}
 .container-content {
   margin-bottom: 20px;
 }
@@ -16,11 +44,12 @@ footer {
   color: white;
   padding-top: 20px;
   padding-bottom: 60px;
-  font-size: small;
+  font-size: 12pt;
 }
 .content {
   display: grid;
   grid-template-columns: auto auto;
+  font-size: 12pt;
 }
 img {
   height: 400px;
@@ -30,13 +59,11 @@ img {
 }
 .text > p {
   padding: 15px;
-  font-size: small;
 }
 button {
   background-color: #f68e36;
   text-transform: uppercase;
   color: white;
-  font-size: 10px;
   border: 1px solid #f68e36;
   border-radius: 5px;
   font-weight: bolder;
