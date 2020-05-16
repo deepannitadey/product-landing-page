@@ -1,16 +1,37 @@
 body {
+  background-color: #ebeae6;
   text-align: center;
   margin: 0px;
   padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+}
+h2 {
+  font-family: "IBM Plex Mono", monospace;
+}
+.container-content {
+  margin-bottom: 20px;
 }
 footer {
-  background-color: rgb(9, 9, 44);
+  background-color: #011926;
   color: white;
-  padding: 10px;
-  font-family: "Noto Sans", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 60px;
   font-size: small;
 }
-
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+img {
+  height: 400px;
+  align-content: center;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.text > p {
+  padding: 15px;
+  font-size: small;
+}
 button {
   background-color: #f68e36;
   text-transform: uppercase;
@@ -18,10 +39,13 @@ button {
   font-size: 10px;
   border: 1px solid #f68e36;
   border-radius: 5px;
-
   font-weight: bolder;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.text > button {
+  padding-right: 50px;
+  padding-left: 50px;
 }
 footer > button {
   margin-top: 2px;
