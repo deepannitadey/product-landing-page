@@ -8,48 +8,23 @@ body {
 h2 {
   font-family: "IBM Plex Mono", monospace;
 }
-ul {
-  list-style-type: none;
-  margin: 0px;
-  padding-bottom: 0px;
-  overflow: hidden;
-  background-color: #363636;
-  padding-left: 400px;
-  padding-right: 400px;
-}
-li {
-  float: left;
-}
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-right: 16px;
-  padding-left: 14px;
-  text-decoration: none;
-  font-size: 11pt;
-  font-family: "Noto Sans", sans-serif;
-}
-li a:hover {
-  background-color: #f68e36;
-  font-weight: bolder;
-}
-.container-content {
-  margin-bottom: 20px;
-}
+
 footer {
   background-color: #011926;
   color: white;
   padding-top: 20px;
-  padding-bottom: 60px;
+
   font-size: 12pt;
+}
+.head-container {
+  grid-template-rows: auto auto;
 }
 .content {
   display: grid;
   grid-template-columns: auto auto;
+  height: auto;
   font-size: 12pt;
+  padding-bottom: 20px;
 }
 img {
   height: 400px;
@@ -79,4 +54,64 @@ footer > button {
   margin-bottom: 20px;
   padding-left: 90px;
   padding-right: 90px;
+}
+@media screen and (max-width: 480px) {
+  .content {
+    /* display: grid;
+    grid-template-columns: auto auto;
+    font-size: 12pt; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  img {
+    /* height: 400px;
+    align-content: center;
+    border: 1px solid grey;
+    border-radius: 5px; */
+    max-width: 100%;
+  }
+  .text > p {
+    padding: 15px;
+    font-size: 11pt;
+  }
+  .text > button {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+  footer > button {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  footer {
+    padding-bottom: 30px;
+  }
+  footer > p {
+    font-size: 10pt;
+  }
+}
+@media screen and (max-width: 1980) {
+  .container-content {
+    height: auto;
+  }
+  .text > p {
+    padding: 15px;
+    font-size: 16pt;
+  }
+  .text > button {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+  footer > button {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  footer {
+    padding-bottom: 30px;
+  }
+  footer > p {
+    font-size: 14pt;
+  }
 }

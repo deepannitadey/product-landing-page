@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Landing Page</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="nav.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
       rel="stylesheet"
@@ -13,16 +14,22 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <!-- nav bar -->
-    <div class="nav">
-      <ul>
-        <li><a href="the book series">The book series</a></li>
-        <li><a href="testimonials">Testimonials</a></li>
-        <li><a href="th author">The Author</a></li>
-        <li><a href="free resources">Free resources</a></li>
-      </ul>
+
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active">The book series</a>
+      <a href="#news">Testimonials</a>
+      <a href="#contact">The Author</a>
+      <a href="#about">Free resources</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <!-- Content section with grid -->
     <div class="container-content">
@@ -31,24 +38,37 @@
           You dont know JavaScript
         </h2>
       </div>
-      <div class="content">
-        <div class="image">
-          <img src="book_cover.jpg" alt="" />
+      <div class="head-container">
+        <div class="content">
+          <div class="image">
+            <img src="book_cover.jpg" alt="" />
+          </div>
+          <div class="text">
+            <p>Don't just drift through Javascript.</p>
+            <p>Understand how Javascript works</p>
+            <p>Start your journey through the bumpy side of Javascript</p>
+            <button>order your copy now</button>
+          </div>
         </div>
-        <div class="text">
-          <p>Don't just drift through Javascript.</p>
-          <p>Understand how Javascript works</p>
-          <p>Start your journey through the bumpy side of Javascript</p>
-          <button>order your copy now</button>
-        </div>
+        <!-- footer -->
+        <footer>
+          <p>
+            The first ebook in the book series is absolutely free.
+          </p>
+          <button>Find out more about this offer</button>
+        </footer>
       </div>
     </div>
-    <!-- footer -->
-    <footer>
-      <p>
-        The first ebook in the book series is absolutely free.
-      </p>
-      <button>Find out more about this offer</button>
-    </footer>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
   </body>
 </html>
